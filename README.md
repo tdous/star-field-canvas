@@ -11,7 +11,7 @@ npm install --save tdous/star-field-canvas
 ## Usage
 
 ### Instantiating
-The main class is exported at the moment as a traditional browser lib, not a module. This is done via the webpack expose-loader, hence it's encapsulated within a 'library' to minimize pollution, but sadly means instantiating with...
+The main class is exported at the moment as a traditional global library, not an ES6 module. This is done via the webpack expose-loader, hence it's encapsulated within a 'library' to minimize pollution, which means instantiating with...
 
 ```
 var sf = new StarFieldCanvas.StarField('my-canvas-element-id');

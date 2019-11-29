@@ -1,6 +1,8 @@
 # star-field-canvas
 Configurable fly-through star field effect for HTML canvas.
 
+https://tdous.github.io/star-field-canvas/
+
 ## Installing
 ```
 npm install --save tdous/star-field-canvas

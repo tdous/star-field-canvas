@@ -101,8 +101,8 @@ export class Star {
     }
 
     // Update x and y - 0.8 is an arbitrary fraction of the
-    let newX = this.W * (this.x / this.z) + offsetX;
-    let newY = this.H * (this.y / this.z) + offsetY;
+    let newX = this.W * (this.x / this.z) - offsetX;
+    let newY = this.H * (this.y / this.z) - offsetY;
 
     // Get max Z and calc new radius/opacity based on star's position in Z range
     const maxZ = this.getInitialZ();

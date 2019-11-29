@@ -151,10 +151,10 @@ export class StarField {
 
   // Draw the stars in this frame
   private draw() {
-    // Calc any mouse offsets
+    // Adjust offsets closer to target offset
     if (this.offsetX !== this.offsetTX) {
-      this.offsetX += Math.floor((this.offsetTX - this.offsetX) / 50);
-      this.offsetY += Math.floor((this.offsetTY - this.offsetY) / 50);
+      this.offsetX += (this.offsetTX - this.offsetX) * 0.02;
+      this.offsetY += (this.offsetTY - this.offsetY) * 0.02;
     }
 
     // Clear the canvas ready for this frame

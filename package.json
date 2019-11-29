@@ -1,0 +1,22 @@
+{
+  "name": "star-field-canvas",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx gulp ts",
+    "watch": "npx gulp ts:w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "anim-loop-engine": "github:tdous/anim-loop-engine",
+    "map-number-to-range": "github:tdous/map-number-to-range"
+  }
+}

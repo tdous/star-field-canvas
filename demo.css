@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { background-color: #222; }
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+#space {
+  background-color: #000;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+}
+
+.controls {
+  background-color: rgba(20, 20, 20, 0.4);
+  bottom: 10px;
+  color: #FFF;
+  height: 200px;
+  left: 10px;
+  padding: 20px;
+  position: absolute;
+  width: 200px;
+}
+
+
+.controls ul {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.controls li {
+  list-style: none;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.controls label {
+  flex: 1;
+  font-family: "Open Sans", "Roboto", sans-serif;
+  font-size: 0.7em;
+  color: #AAA;
+}
+.controls input {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 2px;
+  flex: 1;
+  margin-left: 10px;
+  padding: 5px 5px;
+  width: 1px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="demo.css" />
+    <title>StarField Demo</title>
+  </head>
+
+  <body>
+    <canvas id="space"></canvas>
+    <div class="controls">
+      <ul>
+        <li>
+          <label>Number of stars</label>
+          <input type="text" id="ctrlNumStars" maxlength="4" />
+        </li>
+        <li>
+          <label>Maximum velocity</label>
+          <input type="text" id="ctrlMaxV" maxlength="2" />
+        </li>
+        <li>
+          <label>Minimum velocity</label>
+          <input type="text" id="ctrlMinV" maxlength="2" />
+        </li>
+        <li>
+          <label>Respond to mouse</label>
+          <input type="checkbox" id="ctrlMouse" />
+        </li>
+      </ul>
+    </div>
+    <script src="dist/StarFieldCanvas.js"></script>
+    <script src="demo.js"></script>
+  </body>
+</html>

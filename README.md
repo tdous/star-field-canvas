@@ -27,6 +27,7 @@ The ```canvas``` id is required. Otherwise all options are... optional. These ar
 
 ```
 var sf = new StarFieldCanvas.StarField('my-canvas-element-id', {
+  followContext: [uses 'this.canvas' within the class],
   followMouse: false,
   color: { r: 255, g: 255, b: 255 },
   glow: false,
@@ -37,6 +38,15 @@ var sf = new StarFieldCanvas.StarField('my-canvas-element-id', {
 });
 
 sf.start();
+```
+
+The ```followContext``` option is the element or object to attach the mousemove listener to, if you enable ```followMouse``` but need it to respond to something other than the canvas, perhaps if the canvas is behind another fullscreen element. eg. you can use the global window as the context:
+
+```
+var sf = new StarFieldCanvas.StarField('my-canvas-element-id', {
+  followContext: window,
+  ...
+});
 ```
 
 ### Stop is you must

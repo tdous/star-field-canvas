@@ -5,6 +5,9 @@
  // Canvas element to use - style/position this with CSS
 var canvasId = 'space'; // required
 
+// If you enable 'followMouse' and need mousemove on different element to canvas
+// var followContext = window; // optional, default 'this.canvas' in class
+
 // Illusion of changing view direction due to mouse pos
 var followMouse = false; // optional, default false
 
@@ -29,6 +32,7 @@ var trails = true; // optional, default false
 // Setup the Starfield
 // var starfield = new Starfield.Starfield(canvasId); // Run with defaults
 var starfield = new StarFieldCanvas.StarField(canvasId, {
+  // followContext: followContext
   followMouse: followMouse,
   color: color,
   glow: glow,

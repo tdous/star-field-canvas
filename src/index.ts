@@ -5,6 +5,7 @@ import { defaultColor, StarColorObj } from './starColor';
 
 type StarFieldOpts = {
   followMouse?: boolean;
+  followContext?: any;
   color?: StarColorObj;
   glow?: boolean;
   maxV?: number;
@@ -43,6 +44,7 @@ export class StarField {
   private resizeTimeout: number = 0;
 
   color: StarColorObj;
+  followContext: any;
   glow: boolean;
   minV: number;
   maxV: number;
@@ -67,6 +69,9 @@ export class StarField {
     const rect = this.canvas.getBoundingClientRect();
     this.canvasRectLeft = rect.left;
     this.canvasRectTop = rect.top;
+
+    // Assign follow context now that this.canvas was assigned
+    this.followContext = opts.followContext || this.canvas;
 
     this.handleMouseMove = this.handleMouseMove.bind(this);
 
@@ -216,9 +221,9 @@ export class StarField {
   }
   setFollowMouse(val: boolean) {
     if (val) {
-      this.canvas.addEventListener('mousemove', this.handleMouseMove);
+      this.followContext.addEventListener('mousemove', this.handleMouseMove);
     } else {
-      this.canvas.removeEventListener('mousemove', this.handleMouseMove);
+      this.followContext.removeEventListener('mousemove', this.handleMouseMove);
       this.resetMouseOffset();
     }
   }

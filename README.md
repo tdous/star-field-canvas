@@ -47,4 +47,4 @@ sf.stop();
 
 In case you want to use it for a flying star field effect but with alternate colors, ie. not white stars on black space background, this script does not fill the canvas background at all. It *only* draws the stars. You should style the canvas with CSS. There is no need to use height or width attributes on the ```canvas``` element CSS computed values be applied to the canvas in the script.
 
-See the demo index.html file for an example.
+See the demo JS file for an example, running at https://tdous.github.io/star-field-canvas/.
